@@ -44,4 +44,4 @@ def rep_to_output(rep):
     return [ item_dict['item'] for item_dict in rep['itemScores']]
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')

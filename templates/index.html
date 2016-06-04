@@ -7,4 +7,14 @@
     <form>
         <input type="text" name="query">
     </form>
+    <hr>
+    {% if output %}
+    <ul>
+    {% for repo in output %}
+        <li><a href="https://github.com/{{ repo }}">{{ repo }}</a></li>
+    {% endfor %}
+    </ul>
+    {% elif output is not none %}
+        no result
+    {% endif %}
 </body>

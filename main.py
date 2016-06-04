@@ -15,8 +15,8 @@ USER_PATTERN = r'(\w|-)+'
 REPO_PATTERN = r'{user}/(\w|-|\.)+'.format(user=USER_PATTERN)
 
 app = Flask(__name__)
-user_re = re.compile(USER_PATTERN)
-repo_re = re.compile(REPO_PATTERN)
+user_re = re.compile(r'^' + USER_PATTERN + r'$')
+repo_re = re.compile(r'^' + REPO_PATTERN + r'$')
 
 engine_client = predictionio.EngineClient(url="https://localhost:8000")
 

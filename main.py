@@ -35,7 +35,7 @@ def request_to_engine(query):
         rep = engine_client.send_query({"user": query})
         return rep_to_output(rep)
     elif repo_re.match(query):
-        rep = engine_client.send_query({"user": query})
+        rep = engine_client.send_query({"item": query})
         return rep_to_output(rep)
     else:
         return []
